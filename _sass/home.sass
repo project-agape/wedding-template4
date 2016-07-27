@@ -89,7 +89,7 @@ html,body
       margin-right: auto
     .timeline-block
       position: relative
-      margin: 100px auto
+      margin: 50px auto
       .timeline-img
         background-color: #2b415a
         position: relative
@@ -262,122 +262,30 @@ html,body
     color: #2b415a
     text-align: center
 
-@media (max-width: $screen-sm-max)
+@media (max-width: 1440px)
   #cover
     .container
       .intro-text-container
+        background-size: 60%
         .intro-header
           .into-header-text
-            font-size: 5.5em
+            top: 10px
+            font-size: 4.5em
         .caption
-          margin: 30px 0 15px
-          .intro-caption
-            font-size: 2.5em
-        .intro-button-container
-          .intro-button
-            font-size: 1.5em
-            padding: 20px 50px
+          font-size: 1.5em
+          top: 70px
 
+@media (max-width: $screen-md-max)
+  #cover
+    .container
+      .intro-text-container
+        background-size: 75%
+        padding: 180px
 
   #our-story
     .timeline-section
-      margin: 100px 0
-      &:before
-        display: none
       .timeline-block
-        margin: 50px 0
-        .timeline-img
-          position: relative
-          display: table
-          margin: 0 auto
-          top: 0
-          left: 0
-          right: 0
-        .timeline-content
-          text-align: center
-          width: 90%
-          margin: 0 auto
-          float: none !important
-
-  #venue
-    .content-container
-      margin: 0 50px 50px
-
-  #rsvp
-    .section-container
-      .content-container
-        #form-content
-          .form-item
-            max-width: 90%
-            .content-number
-              max-width: 100%
-            .content-select
-              max-width: 100%
-
-@media (max-width: 568px)
-  #cover
-    height: auto
-    .container
-      .intro-text-container
-        top: 0
-        transform: none
-        padding: 100px 0
-        .intro-header
-          .into-header-text
-            font-size: 6.3em
-
-  #our-story
-    .timeline-section
-      margin: 50px 0
-      .timeline-block
-        .timeline-content
-          width: 100%
-          padding-left: 5px
-          padding-right: 5px
-          text-align: left
-
-  #venue
-    .content-container
-      margin: 0
-      border-top: 2px dashed white
-      border-left: none
-      border-right: none
-      border-bottom: 2px dashed white
-      border-radius: 0
-      padding-left: 15px
-      padding-right: 15px
-      .section-content
-        .section-header
-          font-size: 3.5em
-
-  #rsvp
-    .section-container
-      .section-header
-        h1
-          font-size: 2.5em
-
-  #rsvp
-    .section-container
-      .content-container
-        #form-content
-          .content-button-container
-            max-width: 90%
-
-@media (max-width: $screen-xs)
-  #cover
-    .container
-      .intro-text-container
-        padding: 50px 0
-        .caption
-          .intro-caption
-            font-size: 2em
-
-
-
-  
-
-
-
-
-
-
+        .content-section
+          .timeline-content
+            p
+              padding: 20px 0
