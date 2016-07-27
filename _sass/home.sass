@@ -1,0 +1,394 @@
+
+html,body
+  font-family: 'Gotham-Light', 'sans-serif'
+  margin: 0
+  color: #555555
+
+//Global
+.stylized
+  font-family: 'Back-to-Black','sans-serif'
+  color: white
+
+
+.stylized-header
+  font-family: 'Angelique-Rose','sans-serif'
+  color: #a4a4a4
+
+.section-header
+  text-transform: uppercase
+
+.no-gutter
+  padding-left: 0
+  padding-right: 0
+
+#cover
+  position: relative
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('img/cover-bg.jpg')
+  background-attachment: fixed
+  background-size: cover
+  background-position: center center
+  height: 100vh
+  .container
+    height: inherit
+    .intro-text-container
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      .intro-header
+        .into-header-text
+          color: white
+          font-size: 9em
+          text-align: center
+      .caption
+        margin: 60px 0 50px
+        color: white
+        .intro-caption
+          display: block
+          font-size: 3.2em
+          transform: uppercase
+          font-family: 'Gotham-Light'
+          text-align: center
+
+      .intro-button-container
+        margin: 30px auto
+        .intro-button
+          margin: 0 auto
+          color: white
+          font-size: 2em
+          display: block
+          width: fit-content
+          padding: 30px 60px
+          text-decoration: none
+          transition: all 0.3s ease
+          -webkit-transition: all 0.3s ease
+          -o-transition: all 0.3s ease
+          outline: none
+          border: 2px dashed white
+          border-radius: 15px
+
+
+#our-story
+  background-color: black
+  position: relative
+  .timeline-section
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 50px
+      height: 80%
+      width: 4px
+      border-right: 1px dashed #ccc
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+    .timeline-block
+      position: relative
+      margin: 100px auto
+      .timeline-img
+        background-color: black
+        position: absolute
+        border: 3px dotted white
+        padding: 5px
+        width: 250px
+        height: 250px
+        top: 40px
+        left: 0
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        border-radius: 50%
+        img
+          display: block
+          width: 100%
+          height: 100%
+          position: relative
+          border-radius: 50%
+      .timeline-content
+        position: relative
+        border-radius: 0.25em
+        color: #777
+        padding: 20px 40px
+        width: 39%
+        margin-left: 0
+        h2
+          letter-spacing: 5px
+          color: white
+          font-size: 2.5em
+          font-weight: normal
+          font-style: normal
+        p
+          color: white
+          font-size: 16px
+          font-weight: normal
+          margin: 1em 0
+          line-height: 1.7em
+    .circle-shape
+      background: #FF5252
+      box-shadow: 0 0 0 8px white
+      width: 150px
+      height: 150px
+      position: relative
+      top: 40px
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+      border-radius: 50%
+      h2
+        font-family: "Montserrat", "sans-serif"
+        text-transform: uppercase
+        letter-spacing: 0px
+        font-weight: normal
+        font-style: normal
+        text-align: center
+        color: white
+        font-size: 1.3em
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+    &:after
+      content: ''
+      display: table
+      clear: both
+
+#venue
+  background-color: black
+  .content-container
+    padding: 20px 30px
+    border: 3px dashed #FFFFFF
+    border-radius: 50px
+    text-align: center
+    color: white
+    margin: 50px 50px 100px
+    .section-content
+      margin: 50px 0px
+      .section-header
+        text-transform: capitalize
+        margin: 30px 0
+        font-size: 4em
+      ul
+        list-style: none
+        padding-left: 0
+        li
+          margin: 10px 0
+          b
+            font-size: 1.5em
+
+#rsvp
+  position: relative
+  background-color: black
+  .section-container
+    padding-top: 50px
+    padding-bottom: 50px
+    .section-header
+      h1
+        text-transform: none
+        font-size: 3em
+        text-align: center
+        letter-spacing: 5px
+    .content-container
+      #form-content
+        .form-item
+          max-width: 50%
+          min-width: 50%
+          margin: 30px auto
+          .content-title
+            padding-left: 10px
+            padding-bottom: 5px
+            font-size: 1.2em
+            display: block
+            color: white
+            text-transform: uppercase
+          .content-input
+            background-color: transparent
+            outline: none
+            border: 2px dotted white
+            padding: 22px
+            border-radius: 25px
+            color: white
+          .content-number
+            max-width: 50%
+            min-width: 50%
+          .content-select
+            padding: 0 22px
+            max-width: 50%
+            min-width: 50%
+            height: 48px
+        .content-button-container
+          max-width: 50%
+          min-width: 50%
+          margin: 50px auto
+          #ss-submit
+            background: none
+            background-color: white
+            border: none
+            padding: 25px 30px
+            line-height: 0
+            border-radius: 25px
+
+.modal.fade
+  .modal-dialog
+    position: absolute
+    top: 40%
+    left: 0
+    right: 0
+    opacity: 0
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)136
+    -webkit-transition: all 0.3s ease
+    -moz-transition: all 0.3s ease
+    -o-transition: all 0.3s ease
+    transition: all 0.3s ease
+
+
+  &.in .modal-dialog
+    margin-top: 0
+    margin-bottom: 0
+    position: absolute
+    top: 40%
+    opacity: 1
+    -webkit-transform: translateY(-40%)
+    -ms-transform: translateY(-40%)
+    -o-transform: translateY(-40%)
+    transform: translateY(-40%)
+
+/* DIALOG CONTENT
+.modal-content
+  border: none
+  border-radius: 2px
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  padding: 8% 5%
+  background-color: white
+  .text-alert
+    margin: 50px auto
+    color: black
+    text-align: center
+
+@media (max-width: $screen-sm-max)
+  #cover
+    .container
+      .intro-text-container
+        .intro-header
+          .into-header-text
+            font-size: 5.5em
+        .caption
+          margin: 30px 0 15px
+          .intro-caption
+            font-size: 2.5em
+        .intro-button-container
+          .intro-button
+            font-size: 1.5em
+            padding: 20px 50px
+
+
+  #our-story
+    .timeline-section
+      margin: 100px 0
+      &:before
+        display: none
+      .timeline-block
+        margin: 50px 0
+        .timeline-img
+          position: relative
+          display: table
+          margin: 0 auto
+          top: 0
+          left: 0
+          right: 0
+        .timeline-content
+          text-align: center
+          width: 90%
+          margin: 0 auto
+          float: none !important
+
+  #venue
+    .content-container
+      margin: 0 50px 50px
+
+  #rsvp
+    .section-container
+      .content-container
+        #form-content
+          .form-item
+            max-width: 90%
+            .content-number
+              max-width: 100%
+            .content-select
+              max-width: 100%
+
+@media (max-width: 568px)
+  #cover
+    height: auto
+    .container
+      .intro-text-container
+        top: 0
+        transform: none
+        padding: 100px 0
+        .intro-header
+          .into-header-text
+            font-size: 6.3em
+
+  #our-story
+    .timeline-section
+      margin: 50px 0
+      .timeline-block
+        .timeline-content
+          width: 100%
+          padding-left: 5px
+          padding-right: 5px
+          text-align: left
+
+  #venue
+    .content-container
+      margin: 0
+      border-top: 2px dashed white
+      border-left: none
+      border-right: none
+      border-bottom: 2px dashed white
+      border-radius: 0
+      padding-left: 15px
+      padding-right: 15px
+      .section-content
+        .section-header
+          font-size: 3.5em
+
+  #rsvp
+    .section-container
+      .section-header
+        h1
+          font-size: 2.5em
+
+  #rsvp
+    .section-container
+      .content-container
+        #form-content
+          .content-button-container
+            max-width: 90%
+
+@media (max-width: $screen-xs)
+  #cover
+    .container
+      .intro-text-container
+        padding: 50px 0
+        .caption
+          .intro-caption
+            font-size: 2em
+
+
+
+  
+
+
+
+
+
+
