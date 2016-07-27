@@ -7,10 +7,10 @@
                 <span class="timeline-title">{{ story.title }}</span>
             </div>
             <div {% if story.title == "RSVP" %} class="hidden" {% else %} class="content-section clearfix {% endif %}">
-                <div class="col-md-6 left-section timeline-content {% cycle 'pull-left', 'pull-right' %}">
+                <div class="col-md-6 col-sm-12 col-xs-12 left-section timeline-content {% cycle 'pull-left', 'pull-right' %}">
                     <img  class="content-image center-block" src="img/{{ story.image }}"/>
                 </div>
-                <div class="col-md-6 right-section timeline-content">
+                <div class="col-md-6 col-sm-12 col-xs-12 right-section timeline-content">
                     <p class="content-description">{{ story.description }}</p>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 
             <div class="form-item clearfix">
                 <span class="content-title ">Number of Attendees</span>
-                <input class="content-input content-number form-control" min="0" name="entry.1152925724" id="entry.1152925724" autocomplete="off" required type="number" name="entry.1152925724" id="entry.1152925724" value="" aria-required="true" aria-invalid="false">
+                <input class="content-input content-number form-control" min="0" name="entry.1152925724" id="entry.1152925724" autocomplete="off" required type="number" name="entry.1152925724" id="entry.1152925724" value="0" aria-required="true" aria-invalid="false">
             </div>
 
             <div class="form-item clearfix">

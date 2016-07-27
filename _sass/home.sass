@@ -127,6 +127,9 @@ html,body
             max-width: 80%
             min-width: 60%
             border-radius: 30px
+            padding: 20px
+            border: 2px dotted #ffcb7d
+            background-color: #2b415a
 
           h2
             letter-spacing: 5px
@@ -135,6 +138,7 @@ html,body
             font-weight: normal
             font-style: normal
           p
+            background-color: #2b415a
             color: white
             font-size: 18px
             font-weight: normal
@@ -280,7 +284,7 @@ html,body
     .container
       .intro-text-container
         background-size: 75%
-        padding: 180px
+        padding: 180px 0
 
   #our-story
     .timeline-section
@@ -289,3 +293,43 @@ html,body
           .timeline-content
             p
               padding: 20px 0
+
+@media (max-width: $screen-sm-max)
+  #cover
+    .container
+      .intro-text-container
+        background-size: 95%
+        padding: 250px 0
+        .intro-header
+          .into-header-text
+            top: 10px
+            font-size: 5em
+        .caption
+          font-size: 1.7em
+          top: 70px
+
+  #our-story
+    .timeline-section
+      #form-content
+        .form-item
+          max-width: 90%
+        .content-button-container
+          max-width: 90%
+      &:before
+        height: 80%
+
+      .timeline-block
+        .content-section
+          .timeline-content
+            padding: 50px
+@media (max-width: $screen-xs-max)
+  #cover
+    .container
+      .intro-text-container
+        .intro-header
+          .into-header-text
+            font-size: 4em
+            top: 14px
+        .caption
+          .intro-date
+            top: 55px
