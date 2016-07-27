@@ -3,6 +3,7 @@ html,body
   font-family: 'Gotham-Light', 'sans-serif'
   margin: 0
   color: #555555
+  background-color: #2b415a
 
 //Global
 .stylized
@@ -23,13 +24,20 @@ html,body
 
 #cover
   position: relative
-  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('img/cover-bg.jpg')
-  background-attachment: fixed
-  background-size: cover
-  background-position: center center
   height: 100vh
   .container
     height: inherit
+    &:before
+      content: ""
+      position: absolute
+      bottom: 0
+      height: 75%
+      width: 4px
+      border-right: 1px solid #ffcb7d
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
     .intro-text-container
       position: relative
       top: 50%
@@ -37,51 +45,44 @@ html,body
       -moz-transform: translateY(-50%)
       -ms-transform: translateY(-50%)
       -o-transform: translateY(-50%)
+      background-image: url('img/cover-border.png')
+      background-color: #2b415a
+      padding: 250px 0
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 80%
       .intro-header
         .into-header-text
+          position: relative
+          top: 20px
           color: white
-          font-size: 9em
+          font-size: 6.5em
           text-align: center
+          margin: 0
       .caption
-        margin: 60px 0 50px
+        margin: 0
         color: white
-        .intro-caption
+        font-size: 2.5em
+        text-align: center
+        .intro-date
+          position: relative
+          top: 75px
           display: block
-          font-size: 3.2em
-          transform: uppercase
-          font-family: 'Gotham-Light'
           text-align: center
-
-      .intro-button-container
-        margin: 30px auto
-        .intro-button
-          margin: 0 auto
-          color: white
-          font-size: 2em
-          display: block
-          width: fit-content
-          padding: 30px 60px
-          text-decoration: none
-          transition: all 0.3s ease
-          -webkit-transition: all 0.3s ease
-          -o-transition: all 0.3s ease
-          outline: none
-          border: 2px dashed white
-          border-radius: 15px
+          font-family: 'Gotham-Light'
 
 
 #our-story
-  background-color: black
   position: relative
   .timeline-section
     position: relative
     &:before
       content: ''
       position: absolute
-      top: 50px
-      height: 80%
+      top: -100px
+      height: 90%
       width: 4px
-      border-right: 1px dashed #ccc
+      border-right: 1px solid #ffcb7d
       left: 0
       right: 0
       margin-left: auto
@@ -90,13 +91,10 @@ html,body
       position: relative
       margin: 100px auto
       .timeline-img
-        background-color: black
-        position: absolute
-        border: 3px dotted white
-        padding: 5px
+        background-color: #2b415a
+        position: relative
         width: 250px
         height: 250px
-        top: 40px
         left: 0
         right: 0
         margin-left: auto
@@ -106,27 +104,44 @@ html,body
           display: block
           width: 100%
           height: 100%
-          position: relative
           border-radius: 50%
-      .timeline-content
-        position: relative
-        border-radius: 0.25em
-        color: #777
-        padding: 20px 40px
-        width: 39%
-        margin-left: 0
-        h2
-          letter-spacing: 5px
-          color: white
-          font-size: 2.5em
-          font-weight: normal
-          font-style: normal
-        p
-          color: white
-          font-size: 16px
-          font-weight: normal
-          margin: 1em 0
-          line-height: 1.7em
+        .timeline-title
+          position: absolute
+          color: #ffcb7d
+          top: 50%
+          left: 0
+          right: 0
+          margin-left: auto
+          margin-right: auto
+          text-align: center
+          transform: translateY(-50%)
+          text-transform: uppercase
+          font-size: 1.5em
+      .content-section
+        .timeline-content
+          position: relative
+          padding: 80px 50px
+          color: #777
+          margin-left: 0
+          .content-image
+            max-width: 80%
+            min-width: 60%
+            border-radius: 30px
+
+          h2
+            letter-spacing: 5px
+            color: white
+            font-size: 2.5em
+            font-weight: normal
+            font-style: normal
+          p
+            color: white
+            font-size: 18px
+            font-weight: normal
+            line-height: 30px
+            text-align: justify
+            padding: 100px 0
+        
     .circle-shape
       background: #FF5252
       box-shadow: 0 0 0 8px white
@@ -157,7 +172,6 @@ html,body
       clear: both
 
 #venue
-  background-color: black
   .content-container
     padding: 20px 30px
     border: 3px dashed #FFFFFF
@@ -181,7 +195,6 @@ html,body
 
 #rsvp
   position: relative
-  background-color: black
   .section-container
     padding-top: 50px
     padding-bottom: 50px
