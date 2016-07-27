@@ -14,27 +14,30 @@ markdown: kramdown
 
 navbar-menu:
   - name: Our Story
-    url:
+    url: ourstory
 
   - name: Event Details
-    url:
+    url: event-detail
 
   - name: RSVP
-    url:
+    url: rsvp
 
 cover:
   couple-name: "Joey + Christine"
   wedding-date: "10-05-2016"
 
 content:
-  - title: Our Story
+  - id: ourstory
+    title: Our Story
     image: "content-image.jpg"
     description: Cras varius, nunc et maximus ullamcorper, tellus tellus posuere ipsum, ac tincidunt orci tortor id sapien. Vivamus ultrices purus id nisl volutpat, et placerat nisi ultricies. Integer at vehicula elit. Ut non velit non dui finibus finibus. Duis feugiat ut est nec auctor. Nulla vestibulum, ante sit amet rutrum ornare, turpis nunc laoreet felis, quis pellentesque
 
-  - title: Event Details
+  - id: event-detail
+    title: Event Details
     image: "content-image.jpg"
     description: Cras varius, nunc et maximus ullamcorper, tellus tellus posuere ipsum, ac tincidunt orci tortor id sapien. Vivamus ultrices purus id nisl volutpat, et placerat nisi ultricies. Integer at vehicula elit. Ut non velit non dui finibus finibus. Duis feugiat ut est nec auctor. Nulla vestibulum, ante sit amet rutrum ornare, turpis nunc laoreet felis, quis pellentesque
 
-  - title: RSVP
+  - id: rsvp
+    title: RSVP
 
 
