@@ -1,15 +1,23 @@
 <div class="container">
     <div class="timeline-section">
-        {% for story in site.outstory %}
+        {% for story in site.content %}
         <div class="timeline-block clearfix">
             <div class="timeline-img picture">
-                <img src="{{ story.image }}">
+                <img src="img/content-border.png">
+                <span class="timeline-title">{{ story.title }}</span>
             </div>
-            <div class="timeline-content {% cycle 'text-left pull-right', 'text-right pull-left' %}">
-                <h2 class="stylized">{{ story.title }}</h2>
-                <p>{{ story.description }}</p>
+            <div {% if story.title == "RSVP" %} class="hidden" {% else %} class="content-section clearfix {% endif %}">
+                <div class="col-md-6 left-section timeline-content {% cycle 'pull-left', 'pull-right' %}">
+                    <img  class="content-image center-block" src="img/{{ story.image }}"/>
+                </div>
+                <div class="col-md-6 right-section timeline-content">
+                    <p class="content-description">{{ story.description }}</p>
+                </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
+
+
+<!--{% cycle 'text-left pull-right', 'text-right pull-left' %}-->
