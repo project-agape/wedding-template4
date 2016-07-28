@@ -47,26 +47,26 @@ html,body
       -o-transform: translateY(-50%)
       background-image: url('img/cover-border.png')
       background-color: #2b415a
-      padding: 250px 0
+      padding: 270px 0
       background-repeat: no-repeat
       background-position: center center
-      background-size: 80%
+      background-size: 70%
       .intro-header
         .into-header-text
           position: relative
           top: 20px
           color: white
-          font-size: 6.5em
+          font-size: 7em
           text-align: center
           margin: 0
       .caption
         margin: 0
         color: white
-        font-size: 2.5em
         text-align: center
         .intro-date
           position: relative
-          top: 75px
+          font-size: 2.2em
+          top: 130px
           display: block
           text-align: center
           font-family: 'Gotham-Light'
@@ -273,18 +273,24 @@ html,body
         background-size: 60%
         .intro-header
           .into-header-text
-            top: 10px
-            font-size: 4.5em
+            top: 25px
+            font-size: 6em
         .caption
-          font-size: 1.5em
-          top: 70px
+          .intro-date
+            top: 100px
+            font-size: 1.7em
 
 @media (max-width: $screen-md-max)
+
   #cover
     .container
       .intro-text-container
-        background-size: 75%
-        padding: 180px 0
+        background-size: 65%
+        padding: 220px 0
+        .intro-header
+          .into-header-text
+            top: 15px
+            font-size: 5.5em
 
   #our-story
     .timeline-section
@@ -303,10 +309,7 @@ html,body
         .intro-header
           .into-header-text
             top: 10px
-            font-size: 5em
-        .caption
-          font-size: 1.7em
-          top: 70px
+            font-size: 6.5em
 
   #our-story
     .timeline-section
@@ -322,14 +325,59 @@ html,body
         .content-section
           .timeline-content
             padding: 50px
+
 @media (max-width: $screen-xs-max)
   #cover
     .container
       .intro-text-container
+        padding: 180px 0
         .intro-header
           .into-header-text
-            font-size: 4em
+            font-size: 5em
             top: 14px
         .caption
           .intro-date
-            top: 55px
+            top: 90px
+
+@media (max-width: 568px)
+  #cover
+    .container
+      .intro-text-container
+        background-image: url('img/cover-border-small.png')
+        .intro-header
+          .into-header-text
+            font-size: 4em
+            line-height: 85px
+            top: 0
+        .caption
+          .intro-date
+            top: 0
+
+  #our-story
+    .timeline-section
+      .timeline-block
+        .timeline-img
+          height: 200px
+          width: 200px
+        .content-section
+          .timeline-content
+            padding: 80px 0 30px
+            .content-image
+              max-width: 90%
+            p
+              font-size: 16px
+              max-width: 90%
+              margin: 0 auto
+              text-align: left
+      #form-content
+        .form-item
+          .content-number
+            max-width: 100%
+          .content-select
+            max-width: 100%
+
+
+
+
+
+
