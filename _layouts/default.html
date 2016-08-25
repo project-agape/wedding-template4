@@ -32,6 +32,158 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="{{'js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{'js/jquery.countdown.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{'js/kinetic-v5.1.0.js' | prepend: site.baseurl }}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr_tSMMzACrUJfTuVZM3T5bC4EbC5dR5k&callback=initMap"></script>
+<script type="text/javascript">
+  function initMap() {
+    var mapLocation = {lat: 14.587638, lng: 121.1766565};
+    var customMapType = new google.maps.StyledMapType(
+            [
+              {
+                "featureType": "administrative",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#444444"
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "color": "#f2f2f2"
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "saturation": "-34"
+                  },
+                  {
+                    "visibility": "on"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "hue": "#ff0000"
+                  }
+                ]
+              },
+              {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "saturation": -100
+                  },
+                  {
+                    "lightness": 45
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "visibility": "simplified"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.arterial",
+                "elementType": "labels.icon",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "color": "#156789"
+                  },
+                  {
+                    "visibility": "on"
+                  }
+                ]
+              }
+            ],
+            {
+              name: 'Custom Style'
+            });
+    var customMapTypeId = 'custom_style';
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      draggable: true,
+      zoomControl: true,
+      scaleControl: false,
+      scrollwheel: false,
+      center: mapLocation,
+      mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+      }
+    });
+
+    var contentString =
+
+            '<div id="info-window-container">'+
+            '<div class="info-window-header">'+
+            '<h3 class="section-header"> Wedding Location</h3>'+
+            '</div>'+
+            '<div class="info-window-content">' +
+            '<address>{{ site.venue.wedding-location }}</address>'+
+            '</div>'+
+            '<div class="info-window-footer">' +
+            '<a class="get-direction" href="https://www.google.com.ph/maps/dir//Our+Lady+of+Peace+and+Good+Voyage+Shrine,+Dela+Paz+St,+Antipolo,+Rizal/@14.5886514,121.1747128,18.37z/data=!4m15!1m6!3m5!1s0x3397bf53fd15d2b1:0xa23619ce8136cfc6!2sOur+Lady+of+Peace+and+Good+Voyage+Shrine!8m2!3d14.587638!4d121.1766565!4m7!1m0!1m5!1m1!1s0x3397bf53fd15d2b1:0xa23619ce8136cfc6!2m2!1d121.1766565!2d14.587638" target="_blank">GET DIRECTION</a>'+
+            '</div>'
+            '</div>';
+
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      position: mapLocation
+    });
+
+    infowindow.open(map);
+
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
+  }
+</script>
+
 <script type="text/javascript" src="{{'js/home.js' | prepend: site.baseurl }}"></script>
 
 

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="timeline-img picture">
+        <img src="img/content-border.png">
+        <span class="timeline-title">RSVP</span>
+    </div>
+    <div class="content-container">
+       {% for item in site.gallery %}
+       <div class="gallery-image-container col-md-6 col-sm-6 col-xs-12 no-gutter">
+           <img src="img/{{ item.image }}" class="gallery-image"/>
+       </div>
+       {% endfor %}
+    </div>
+</div>

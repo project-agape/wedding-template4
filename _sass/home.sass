@@ -3,7 +3,7 @@ html,body
   font-family: 'Gotham-Light', 'sans-serif'
   margin: 0
   color: #555555
-  background-color: #2b415a
+  background-color: #20293b
 
 //Global
 .stylized
@@ -15,9 +15,6 @@ html,body
   font-family: 'Angelique-Rose','sans-serif'
   color: #a4a4a4
 
-.section-header
-  text-transform: uppercase
-
 .no-gutter
   padding-left: 0
   padding-right: 0
@@ -25,19 +22,12 @@ html,body
 #cover
   position: relative
   height: 100vh
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('img/cover.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
   .container
     height: inherit
-    &:before
-      content: ""
-      position: absolute
-      bottom: 0
-      height: 75%
-      width: 4px
-      border-right: 1px solid #ffcb7d
-      left: 0
-      right: 0
-      margin-left: auto
-      margin-right: auto
     .intro-text-container
       position: relative
       top: 50%
@@ -46,7 +36,6 @@ html,body
       -ms-transform: translateY(-50%)
       -o-transform: translateY(-50%)
       background-image: url('img/cover-border.png')
-      background-color: #2b415a
       padding: 270px 0
       background-repeat: no-repeat
       background-position: center center
@@ -71,6 +60,31 @@ html,body
           text-align: center
           font-family: 'Gotham-Light'
 
+#about
+  position: relative
+  padding-top: 100px
+  .bride-section
+    color: white
+  .groom-section
+    color: white
+  .content-name
+    margin: 30px 0
+    letter-spacing: 5px
+    font-size: 2em
+    font-weight: normal
+    font-style: normal
+  .content-image
+    border: 3px dotted #ffcb7d
+    padding: 15px
+  .content-description
+    color: white
+    max-width: 95%
+    min-width: 95%
+    margin: 1em auto
+    text-align: left
+    font-size: 16px
+    font-weight: normal
+    line-height: 1.7em
 
 #our-story
   position: relative
@@ -79,8 +93,7 @@ html,body
     &:before
       content: ''
       position: absolute
-      top: -100px
-      height: 72%
+      height: 95%
       width: 4px
       border-right: 1px solid #ffcb7d
       left: 0
@@ -91,7 +104,6 @@ html,body
       position: relative
       margin: 50px auto
       .timeline-img
-        background-color: #2b415a
         position: relative
         width: 250px
         height: 250px
@@ -100,6 +112,7 @@ html,body
         margin-left: auto
         margin-right: auto
         border-radius: 50%
+        background-color: #20293b
         img
           display: block
           width: 100%
@@ -124,13 +137,11 @@ html,body
           color: #777
           margin-left: 0
           .content-image
-            max-width: 80%
-            min-width: 60%
-            border-radius: 30px
-            padding: 20px
+            width: 350px
+            height: 350px
+            border-radius: 50%
+            padding: 15px
             border: 2px dotted #ffcb7d
-            background-color: #2b415a
-
           h2
             letter-spacing: 5px
             color: white
@@ -138,7 +149,6 @@ html,body
             font-weight: normal
             font-style: normal
           p
-            background-color: #2b415a
             color: white
             font-size: 18px
             font-weight: normal
@@ -175,54 +185,157 @@ html,body
       display: table
       clear: both
 
-    #form-content
-      margin-bottom: 50px
-      .form-item
-        max-width: 50%
-        min-width: 50%
-        margin: 30px auto
-        .content-title
-          padding-bottom: 5px
-          font-size: 1.2em
+#countdown
+  position: relative
+  padding: 30px 0
+  .section-header
+    color: #ffcb7d
+    font-size: 28px
+    text-align: center
+    text-transform: none
+  #clock
+    .item-list
+      margin: 30px 0
+      .item-container
+        position: relative
+        border: 3px dotted #2b3850
+        border-radius: 50%
+        padding: 90px 5px
+        height: 220px
+        width: 220px
+        color: white
+        margin: 0 auto
+        text-transform: lowercase
+        .countdown-name
           display: block
-          color: #ffcb7d
-          text-transform: uppercase
-        .content-input
-          background-color: transparent
-          outline: none
-          border-top: none
-          border-left: none
-          border-right: none
-          border-bottom: 2px solid #ffcb7d
-          padding: 22px
-          color: white
-          border-radius: 0
-          -webkit-border-radius: 0
-          box-shadow: none
-          -webkit-box-shadow: none
-        .content-number
-          max-width: 50%
-          min-width: 50%
-          border: 2px solid #ffcb7d
-        .content-select
-          padding: 0 22px
-          max-width: 50%
-          min-width: 50%
-          height: 48px
-          border: 2px solid #ffcb7d
-      .content-button-container
+          text-align: center
+          padding: 25px 0
+          font-size: 24px
+        .countdown-value
+          position: relative
+          display: block
+          text-align: center
+          margin-left: auto
+          margin-right: auto
+          .countdown-number
+            font-size: 34px
+            position: absolute
+            top: 50%
+            left: 0
+            right: 0
+            transform: translateY(-50%)
+            -webkit-transform: translateY(-50%)
+            -moz-transform: translateY(-50%)
+            -ms-transform: translateY(-50%)
+            -o-transform: translateY(-50%)
+
+#venue
+  position: relative
+  height: 700px
+  .container-fluid
+    height: inherit
+    #map
+      position: relative
+      height: inherit
+      #info-window-container
+        width: 300px
+        padding: 10px 15px 20px
+        .section-header
+          text-transform: capitalize
+        .info-window-content
+          address
+            font-size: 16px
+            line-height: 25px
+
+#rsvp
+  position: relative
+  padding: 30px 0
+  .section-header
+    color: white
+    font-size: 28px
+    text-align: center
+    text-transform: none
+  #form-content
+    .form-item
+      max-width: 50%
+      min-width: 50%
+      margin: 30px auto
+      .content-title
+        padding-bottom: 5px
+        font-size: 1.2em
+        display: block
+        color: white
+        text-transform: capitalize
+      .content-input
+        background-color: transparent
+        outline: none
+        border: 2px solid #2b415a
+        padding: 22px
+        color: white
+        border-radius: 12px
+        box-shadow: none
+        -webkit-box-shadow: none
+      .content-number
         max-width: 50%
         min-width: 50%
-        margin: 50px auto
-        #ss-submit
-          color: #ffcb7d
-          background: none
-          background-color: transparent
-          padding: 25px 30px
-          line-height: 0
-          border-radius: 0
-          border: 1px solid #ffcb7d
+        border: 2px solid #2b415a
+      .content-select
+        padding: 0 22px
+        max-width: 50%
+        min-width: 50%
+        height: 48px
+        border: 2px solid #2b415a
+        border-radius: 12px
+    .content-button-container
+      max-width: 50%
+      min-width: 50%
+      margin: 50px auto
+      #ss-submit
+        color: white
+        padding: 25px 30px
+        line-height: 0
+        border-radius: 12px
+        border: none
+        background-color: #2b415a
 
+#gallery
+  padding-top: 50px
+  padding-bottom: 50px
+  .timeline-img
+    position: relative
+    width: 250px
+    height: 250px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    border-radius: 50%
+    background-color: #20293b
+    img
+      display: block
+      width: 100%
+      height: 100%
+      border-radius: 50%
+    .timeline-title
+      position: absolute
+      color: #ffcb7d
+      top: 50%
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      transform: translateY(-50%)
+      text-transform: uppercase
+      font-size: 1.5em
+  .content-container
+    margin-top: 50px
+    .gallery-image-container
+      overflow: hidden
+      .gallery-image
+        padding: 5px 10px
+        object-fit: cover
+        object-position: 50% 50%
 
 .modal.fade
   .modal-dialog

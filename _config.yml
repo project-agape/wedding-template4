@@ -26,6 +26,17 @@ cover:
   couple-name: "Joey + Christine"
   wedding-date: "10-05-2016"
 
+about:
+  groom:
+    groom-name: Joey Ramos
+    groom-image: 'groom.png'
+    groom-description: "He is a great programmer who solves any problem through logic and reason. He also loves beer and a movie junkie as well. The founder of a Aestrea Software Development company, a startup and consulting company exclusively working for rocketmiles.com (a Priceline company)."
+
+  bride:
+    bride-name: Christine Dela Merced
+    bride-image: 'bride.png'
+    bride-description: "She is a codesigner (coder-designer), the Google Developer Group and Women Techmakers Community Lead for Cagayan de Oro. Josan's personal advocacy is inspiring women to become a techmaker. Currently, she plays around with her Gemma KIT, a Do-It-Yourslef wearable kit and travels to different places to share great things about it. She's also a UI/UX Engineer and co-founder of Aestrea Software Development."
+
 content:
   - id: ourstory
     title: Our Story
@@ -37,7 +48,13 @@ content:
     image: "content-image.jpg"
     description: Cras varius, nunc et maximus ullamcorper, tellus tellus posuere ipsum, ac tincidunt orci tortor id sapien. Vivamus ultrices purus id nisl volutpat, et placerat nisi ultricies. Integer at vehicula elit. Ut non velit non dui finibus finibus. Duis feugiat ut est nec auctor. Nulla vestibulum, ante sit amet rutrum ornare, turpis nunc laoreet felis, quis pellentesque
 
-  - id: rsvp
-    title: RSVP
+venue:
+  wedding-location: "Our Lady of Peace and Good Voyage Shrine Antipolo City, Metro Manila Philippines"
 
-
+gallery:
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'

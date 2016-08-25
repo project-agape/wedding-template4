@@ -6,7 +6,7 @@
                 <img src="img/content-border.png">
                 <span class="timeline-title">{{ story.title }}</span>
             </div>
-            <div {% if story.title == "RSVP" %} class="hidden" {% else %} class="content-section clearfix {% endif %}">
+            <div class="content-section clearfix">
                 <div class="col-md-6 col-sm-12 col-xs-12 left-section timeline-content {% cycle 'pull-left', 'pull-right' %}">
                     <img  class="content-image center-block" src="img/{{ story.image }}"/>
                 </div>
@@ -16,41 +16,6 @@
             </div>
         </div>
         {% endfor %}
-
-    <div class="content-container">
-        <script type="text/javascript">var submitted = false;</script>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;)"></iframe>
-
-        <form id="form-content" name="" action="https://docs.google.com/a/crux.design/forms/d/e/1FAIpQLScpHtccmlo1H8Z3rOvIOLsn4aeQfsj5rK_JwYiNBrtO8ts-BA/formResponse" class="form-content clearfix" target="hidden_iframe" method="POST">
-            <div class="form-item clearfix">
-                <span class="content-title ">Name</span>
-                <input class="content-input form-control" name="entry.1350055067" id="entry.1350055067" autocomplete="off" required type="text" name="entry.1350055067" id="entry.1350055067" value="" size="40" aria-required="true" aria-invalid="false">
-            </div>
-
-            <div class="form-item clearfix">
-                <span class="content-title ">Email Address</span>
-                <input class="content-input form-control" name="entry.1251597571" id="entry.1251597571" autocomplete="off" required type="email" name="entry.1251597571" id="entry.1251597571" value="" size="40" aria-required="true" aria-invalid="false">
-            </div>
-
-            <div class="form-item clearfix">
-                <span class="content-title ">Number of Attendees</span>
-                <input class="content-input content-number form-control" min="0" name="entry.1152925724" id="entry.1152925724" autocomplete="off" required type="number" name="entry.1152925724" id="entry.1152925724" value="0" aria-required="true" aria-invalid="false">
-            </div>
-
-            <div class="form-item clearfix">
-                <span class="content-title  content-title">Are you going to attend?</span>
-                <select required id="entry.786790778" name="entry.786790778" class="content-input content-select form-control" aria-required="true" aria-invalid="false">
-                    <option class="menu-choice" name="entry.786790778" value="">---</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-            <div class="content-button-container">
-                <button data-toggle="modal" type="submit" id="ss-submit" class="submit-button form-control ">SUBMIT YOUR RESPONSE</button>
-            </div>
-        </form>
-    </div>
-
     </div>
 </div>
 

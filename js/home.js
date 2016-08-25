@@ -4,7 +4,35 @@ main.init = function () {
     main.onMenuClick();
     main.onFormSubmit();
     main.onIconTransition();
+    main.initCountDown();
 }
+
+main.initCountDown = function(){
+    // var beforeWedding = new Date('2016/04/24 15:01:50');
+    var beforeWedding = new Date('2016/12/05');
+    $('#countdown-day').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-D</span>'));
+        if(event.elapsed){
+            $("#countdown .section-header").text("Forever and Counting");
+        }
+        else{
+            $("#countdown .section-header").text("How long do we have to wait?");
+        }
+    });
+
+    $('#countdown-hour').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-H</span>'));
+    });
+
+    $('#countdown-minute').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-M</span>'));
+    });
+
+    $('#countdown-second').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-S</span>'));
+    });
+};
+
 
 main.onFormSubmit = function () {
     $("#form-content").submit(function () {
