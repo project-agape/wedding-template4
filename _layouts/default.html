@@ -36,7 +36,7 @@
 <script type="text/javascript" src="{{'js/kinetic-v5.1.0.js' | prepend: site.baseurl }}"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr_tSMMzACrUJfTuVZM3T5bC4EbC5dR5k&callback=initMap"></script>
 <script type="text/javascript">
-  function initMap() {
+  window.initMap = function() {
     var mapLocation = {lat: 14.587638, lng: 121.1766565};
     var customMapType = new google.maps.StyledMapType(
             [
