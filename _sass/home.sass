@@ -142,6 +142,7 @@ html,body
             border-radius: 50%
             padding: 15px
             border: 2px dotted #ffcb7d
+            background-color: #20293b
           h2
             letter-spacing: 5px
             color: white
@@ -149,6 +150,7 @@ html,body
             font-weight: normal
             font-style: normal
           p
+            background-color: #20293b
             color: white
             font-size: 18px
             font-weight: normal
@@ -167,7 +169,7 @@ html,body
       right: 0
       margin-left: auto
       margin-right: auto
-      border-radius: 50%
+      border-radius: 50%f
       h2
         font-family: "Montserrat", "sans-serif"
         text-transform: uppercase
@@ -394,7 +396,6 @@ html,body
             font-size: 1.7em
 
 @media (max-width: $screen-md-max)
-
   #cover
     .container
       .intro-text-container
@@ -423,6 +424,20 @@ html,body
           .into-header-text
             top: 10px
             font-size: 6.5em
+        .caption
+          .intro-date
+            top: 60px
+            font-size: 1.2em
+
+  #about
+    padding-top: 50px
+    padding-bottom: 50px
+    .bride-section
+      padding-top: 50px
+      padding-bottom: 50px
+    .groom-section
+      padding-top: 50px
+      padding-bottom: 50px
 
   #our-story
     .timeline-section
@@ -433,11 +448,38 @@ html,body
           max-width: 90%
       &:before
         height: 80%
-
+      .timeline-img
+        margin: 0 auto 50px
       .timeline-block
+        margin: 0
         .content-section
           .timeline-content
             padding: 50px
+
+  #rsvp
+    #form-content
+      .form-item
+        max-width: 80%
+        min-width: 80%
+        .content-number
+          max-width: 100%
+          min-width: 0
+        .content-select
+          max-width: 100%
+          min-width: 0
+      .content-button-container
+        max-width: 80%
+        min-width: 0
+@media (max-width: $screen-sm-max) and (orientation: landscape)
+  #cover
+    .container
+      .intro-text-container
+        background-size: 60%
+        padding: 120px 0
+        .intro-header
+          .into-header-text
+            top: 0
+            font-size: 4.5em
 
 @media (max-width: $screen-xs-max)
   #cover
@@ -452,6 +494,12 @@ html,body
           .intro-date
             top: 90px
 
+@media (max-width: $screen-xs-max) and (orientation: landscape)
+  #cover
+    .container
+      .intro-text-container
+        background-size: 45%
+
 @media (max-width: 568px)
   #cover
     .container
@@ -465,7 +513,6 @@ html,body
         .caption
           .intro-date
             top: 0
-
   #our-story
     .timeline-section
       .timeline-block
@@ -476,18 +523,25 @@ html,body
           .timeline-content
             padding: 80px 0 30px
             .content-image
-              max-width: 90%
+              width: 270px
+              height: 270px
             p
               font-size: 16px
               max-width: 90%
               margin: 0 auto
               text-align: left
-      #form-content
-        .form-item
-          .content-number
-            max-width: 100%
-          .content-select
-            max-width: 100%
+  #countdown
+    .section-header
+      padding-left: 15px
+      padding-right: 15px
+
+  #gallery
+    .content-container
+      .gallery-image-container
+        .gallery-image
+          padding-left: 0
+          padding-right: 0
+
 
 
 
