@@ -52,9 +52,9 @@ venue:
   wedding-location: "Our Lady of Peace and Good Voyage Shrine Antipolo City, Metro Manila Philippines"
 
 gallery:
-  - image: 'gallery.jpg'
-  - image: 'gallery.jpg'
-  - image: 'gallery.jpg'
-  - image: 'gallery.jpg'
-  - image: 'gallery.jpg'
-  - image: 'gallery.jpg'
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-1.jpg"
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-2.jpg"
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-3.jpg"
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-4.jpg"
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-5.jpg"
+  - image: "https://res.cloudinary.com/design-studio/image/upload/wedding-template/gallery/image-6.jpg"

@@ -6,7 +6,7 @@
     <div class="content-container">
        {% for item in site.gallery %}
        <div class="gallery-image-container col-md-4 col-sm-6 col-xs-12 no-gutter">
-           <img src="img/{{ item.image }}" class="gallery-image"/>
+           <img src="{{ item.image }}" class="gallery-image"/>
        </div>
        {% endfor %}
     </div>
